@@ -1,75 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Samuel Reade</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fafafa;
-      color: #111;
-      text-align: center;
-    }
-    header {
-      padding: 4rem 1rem;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-    h2 {
-      font-weight: 400;
-      color: #555;
-    }
-    section {
-      max-width: 700px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-    }
-    a.button {
-      display: inline-block;
-      margin: 1rem;
-      padding: 0.7rem 1.4rem;
-      background: #111;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-    }
-  </style>
+  <meta name="description" content="Samuel Reade — UCLA Statistics & Data Science. Machine Learning, Data Engineering, Analytics." />
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="/">SR</a>
+      <nav class="nav-links">
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact" class="pill">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<header>
-  <h1>Samuel Reade</h1>
-  <h2>Statistics & Data Science @ UCLA</h2>
-  <p>Machine Learning • Data Engineering • Analytics</p>
-  <a class="button" href="#projects">Projects</a>
-</header>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="kicker">UCLA • Statistics & Data Science</p>
+          <h1>Hi, I’m Samuel Reade.</h1>
+          <p class="subhead">
+            I build data products and machine learning systems—spanning analytics, pipelines, and modeling—
+            with experience across AI startups and cybersecurity.
+          </p>
 
-<section>
-  <h3>About Me</h3>
-  <p>
-    I’m a Statistics & Data Science student at UCLA with experience in machine learning,
-    anomaly detection, and building scalable data pipelines at AI and cybersecurity startups.
-  </p>
-</section>
+          <div class="cta">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn" href="resume.pdf" target="_blank" rel="noopener">View Resume</a>
+            <a class="btn ghost" href="https://github.com/KingSam1124" target="_blank" rel="noopener">GitHub</a>
+          </div>
 
-<section id="projects">
-  <h3>Projects</h3>
-  <p><strong>Fake News Classification</strong> — 94% accuracy using NLP + Random Forest</p>
-  <p><strong>Netflix Movie Success Prediction</strong> — Bayesian & ensemble models</p>
-  <p><strong>Rally</strong> — Social recommendation engine</p>
-</section>
+          <div class="highlights">
+            <div class="chip">ML & NLP</div>
+            <div class="chip">Data Engineering</div>
+            <div class="chip">Analytics</div>
+            <div class="chip">Python • SQL • TS • R</div>
+          </div>
+        </div>
 
-<footer>
-  <p>
-    <a href="mailto:sam5.reade@gmail.com">Email</a> •
-    <a href="https://github.com/KingSam1124">GitHub</a>
-  </p>
-</footer>
+        <div class="hero-card">
+          <!-- Put your headshot in /assets/headshot.jpg (or .png) -->
+          <div class="photo-wrap">
+            <img class="photo" src="assets/headshot.jpg" alt="Samuel Reade headshot" />
+          </div>
+          <div class="hero-card-body">
+            <p class="small">
+              <strong>Currently:</strong> Building Rally (social recommendation engine) + seeking internships / new grad roles.
+            </p>
+            <div class="mini">
+              <a href="mailto:sam5.reade@gmail.com">sam5.reade@gmail.com</a>
+              <span>•</span>
+              <a href="#" aria-label="LinkedIn (add your link)">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Experience</h2>
+          <p>Highlights of work across analytics, data engineering, and ML.</p>
+        </div>
+
+        <div class="grid cards">
+          <article class="card">
+            <div class="card-top">
+              <h3>Popcorn.co</h3>
+              <p class="muted">Data Analytics / Data Engineering Intern • Jun 2025 – Sep 2025</p>
+            </div>
+            <ul>
+              <li>Built a Customer Data Platform and surfaced KPIs to guide product strategy.</li>
+              <li>Implemented tracking across frontend/backend, processing 600k+ API calls.</li>
+              <li>Led funnel/cohort/retention analysis to identify drop-offs and high-value users.</li>
+            </ul>
+            <div class="tags">
+              <span>Python</span><span>TypeScript</span><span>SQL</span><span>Analytics</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-top">
+              <h3>DTEX Systems</h3>
+              <p class="muted">Data Science Intern • Jun 2024 – Aug 2024</p>
+            </div>
+            <ul>
+              <li>Developed anomaly detection for insider-risk signals over 10M+ data points.</li>
+              <li>Used NLP + iterative clustering to form actionable groups from window-title strings.</li>
+              <li>Built reliable preprocessing pipelines for multidimensional behavior analysis.</li>
+            </ul>
+            <div class="tags">
+              <span>Python</span><span>NLP</span><span>Clustering</span><span>ML</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-top">
+              <h3>UCLA (Leadership)</h3>
+              <p class="muted">Rugby Captain • Club Member • Student Leadership</p>
+            </div>
+            <ul>
+              <li>Captain of UCLA Rugby—communication + execution under pressure.</li>
+              <li>Planned large-scale events and managed a $100k budget (fraternity leadership).</li>
+              <li>Active in UCLA Stats & Data Science Club workshops and tutorials.</li>
+            </ul>
+            <div class="tags">
+              <span>Leadership</span><span>Teamwork</span><span>Operations</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Projects</h2>
+          <p>Selected work—modeling, analysis, and product-building.</p>
+        </div>
+
+        <div class="grid cards">
+          <article class="card">
+            <div class="card-top">
+              <h3>Understanding Misinformation</h3>
+              <p class="muted">COVID-19 Social Media Classification • Python</p>
+            </div>
+            <ul>
+              <li>Prepared 10,700 posts with tokenization, stopwords, and TF-IDF.</li>
+              <li>Engineered features (hashtags, links, sentiment) to improve performance.</li>
+              <li>Reached 94% accuracy; used SHAP + permutation importance for interpretation.</li>
+            </ul>
+            <div class="card-actions">
+              <a class="link" href="#" aria-label="Add project link">Add link →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-top">
+              <h3>Predicting Netflix Movie Success</h3>
+              <p class="muted">Statistical Learning • R</p>
+            </div>
+            <ul>
+              <li>Cleaned 32,540 movies + engineered profit-based success labels.</li>
+              <li>Built Bayesian + ensemble models; tuned hyperparameters with CV.</li>
+              <li>Achieved ~79% prediction accuracy with interpretable analysis (SHAP/PDP).</li>
+            </ul>
+            <div class="card-actions">
+              <a class="link" href="#" aria-label="Add project link">Add link →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-top">
+              <h3>Rally</h3>
+              <p class="muted">Social Recommendation Engine • Building</p>
+            </div>
+            <ul>
+              <li>Originally “Suggestioneer,” winner of Mill Valley Labs’ YEP competition.</li>
+              <li>Rebuilt as Rally using modern dev tools to support a scalable product.</li>
+              <li>Focused on product thinking, iteration, and measurable user value.</li>
+            </ul>
+            <div class="card-actions">
+              <a class="link" href="#" aria-label="Add project link">Add link →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Skills</h2>
+          <p>Tools I use to ship and analyze.</p>
+        </div>
+
+        <div class="skills">
+          <div class="skill">
+            <h4>Languages</h4>
+            <p>Python, TypeScript, R, SQL</p>
+          </div>
+          <div class="skill">
+            <h4>Methods</h4>
+            <p>ML, NLP, clustering, anomaly detection, EDA, Bayesian modeling, SHAP</p>
+          </div>
+          <div class="skill">
+            <h4>Tools</h4>
+            <p>GitHub, Tableau, Amplitude, Excel, LaTeX</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section alt">
+      <div class="container contact">
+        <div>
+          <h2>Contact</h2>
+          <p>If you’re hiring for data science / analytics / data engineering roles, I’d love to connect.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn primary" href="mailto:sam5.reade@gmail.com">Email Me</a>
+          <a class="btn" href="#" aria-label="Add LinkedIn link">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="muted">© <span id="year"></span> Samuel Reade</p>
+      <div class="footer-links">
+        <a href="mailto:sam5.reade@gmail.com">Email</a>
+        <a href="https://github.com/KingSam1124" target="_blank" rel="noopener">GitHub</a>
+        <a href="#" aria-label="Add LinkedIn link">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
