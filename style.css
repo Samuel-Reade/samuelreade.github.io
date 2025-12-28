@@ -384,34 +384,39 @@ h1{
   }
 }
 
-/* Extracurriculars page layout */
-main.container {
-  padding-top: 32px;
+/* Extracurricular cards (same layout as experience/projects) */
+.extra-card {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+  align-items: center;
 }
 
-/* Section heading */
-main.container h2 {
-  margin-bottom: 24px;
-  font-size: 1.6rem;
-}
-
-/* Match spacing with Experience / Projects */
-.project-card {
-  margin-bottom: 32px;
-}
-
+/* Logo container */
 .extra-image {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Logo sizing */
 .extra-image img {
-  width: 100%;
-  max-width: 180px;
-  max-height: 140px;
+  max-width: 120px;
+  max-height: 100px;
   object-fit: contain;
   opacity: 0.9;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .extra-card {
+    grid-template-columns: 1fr;
+  }
+
+  .extra-image {
+    margin-top: 12px;
+  }
+}
+
 
 
