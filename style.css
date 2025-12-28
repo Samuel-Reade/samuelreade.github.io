@@ -345,4 +345,39 @@ h1{
   }
 }
 
+/* Projects cards: text left, image right (same layout as Experience) */
+.project-card {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+  align-items: start;
+  margin-bottom: 24px; /* consistent spacing between projects */
+}
+
+.project-image {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* centers image vertically */
+  padding-top: 8px;
+}
+
+.project-image img {
+  width: 100%;
+  max-width: 240px;
+  max-height: 160px;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+  .project-image {
+    margin-top: 12px;
+  }
+}
+
+
 
