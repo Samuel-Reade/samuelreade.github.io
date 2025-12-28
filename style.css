@@ -384,5 +384,20 @@ h1{
   }
 }
 
+/* Extracurriculars page layout */
+main.container {
+  padding-top: 32px;
+}
+
+/* Section heading */
+main.container h2 {
+  margin-bottom: 24px;
+  font-size: 1.6rem;
+}
+
+/* Match spacing with Experience / Projects */
+.project-card {
+  margin-bottom: 32px;
+}
 
 
