@@ -369,6 +369,17 @@ h1{
   opacity: 0.9;
 }
 
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.project-header h3 {
+  margin: 0;
+}
+
 /* Add consistent spacing between stacked cards */
 .card:not(:last-child) {
   margin-bottom: 24px;
