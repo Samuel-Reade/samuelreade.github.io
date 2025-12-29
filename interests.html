@@ -107,16 +107,28 @@
 </main>
 
   <!-- FOOTER / CONTACT -->
-  <footer id="contact" class="site-footer">
-    <div class="container footer-inner">
-      <p class="muted">© <span id="year"></span> Samuel Reade</p>
-      <div class="footer-links">
-        <a href="mailto:sam5.reade@gmail.com">sam5.reade@gmail.com</a>
-        <a href="https://github.com/KingSam1124" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/samuelreade/" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
+<footer id="contact" class="site-footer">
+  <div class="container footer-inner">
+
+    <!-- Left -->
+    <div class="footer-left">
+      <p class="footer-name">Contact</p>
+      <p class="muted">© <span id="year"></span></p>
     </div>
-  </footer>
+
+    <!-- Right -->
+    <div class="footer-right">
+      <div class="footer-buttons">
+        <a href="mailto:sam5.reade@gmail.com" class="footer-btn">Email</a>
+        <a href="https://github.com/KingSam1124" target="_blank" class="footer-btn">GitHub</a>
+        <a href="https://www.linkedin.com/in/samuelreade/" target="_blank" class="footer-btn">LinkedIn</a>
+      </div>
+
+      <p class="footer-phone muted">+1 (415) 887-8215</p>
+    </div>
+
+  </div>
+</footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
