@@ -76,16 +76,45 @@
 
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p class="muted">© <span id="year"></span> Samuel Reade</p>
-      <div class="footer-links">
-        <a href="mailto:sam5.reade@gmail.com">Email</a>
-        <a href="https://github.com/KingSam1124" target="_blank" rel="noopener">GitHub</a>
-        <a href="#" aria-label="Add LinkedIn link">LinkedIn</a>
-      </div>
+  <!-- FOOTER / CONTACT -->
+<footer id="contact" class="site-footer">
+  <div class="container footer-inner">
+    
+    <div class="footer-left">
+      <p class="footer-name">Samuel Reade</p>
+      <p class="muted">© <span id="year"></span></p>
     </div>
-  </footer>
+
+    <div class="footer-links">
+      <a
+        href="mailto:sam5.reade@gmail.com"
+        class="footer-button"
+        aria-label="Email"
+      >
+        Email
+      </a>
+
+      <a
+        href="https://github.com/KingSam1124"
+        target="_blank"
+        rel="noopener"
+        class="footer-button"
+      >
+        GitHub
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/samuelreade/"
+        target="_blank"
+        rel="noopener"
+        class="footer-button"
+      >
+        LinkedIn
+      </a>
+    </div>
+
+  </div>
+</footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
