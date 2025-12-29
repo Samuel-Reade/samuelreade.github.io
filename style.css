@@ -520,3 +520,8 @@ h1{
   transform: scale(1.25);
   transform-origin: center;
 }
+
+.scale-down {
+  transform: scale(0.85);   
+  transform-origin: center;
+}
