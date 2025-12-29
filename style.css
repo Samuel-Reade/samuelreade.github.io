@@ -476,39 +476,39 @@ h1{
   transform: translateY(-1px);
 }
 
-/* Interests cards */
-.interest-card {
+/* Interests grid */
+.interests-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 32px;
-  align-items: center;
-  margin-bottom: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 }
 
-.interest-text h2 {
-  font-size: 1.8rem;
+/* Interest card */
+.interest-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+}
+
+/* Interest title */
+.interest-card h2 {
+  font-size: 1.6rem;
   font-weight: 700;
   margin: 0;
 }
 
-.interest-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.interest-image img {
-  width: 100%;
-  max-width: 220px;
-  max-height: 160px;
+/* Interest image */
+.interest-card img {
+  max-width: 120px;
+  max-height: 100px;
   object-fit: contain;
+  opacity: 0.9;
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-  .interest-card {
+  .interests-grid {
     grid-template-columns: 1fr;
   }
 }
-
-
