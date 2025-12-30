@@ -568,8 +568,8 @@ h1{
 
 /* Icon wrapper: fixed box */
 .interest-icon {
-  flex: 0 0 100px;         /* fixed width column */
-  height: 100px;           /* fixed height */
+  flex: 0 0 75px;         /* fixed width column */
+  height: 75px;           /* fixed height */
   display: flex;
   align-items: center;
   justify-content: center;
