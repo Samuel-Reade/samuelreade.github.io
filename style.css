@@ -603,7 +603,7 @@ section:last-of-type {
 /* Traits grid */
 .traits-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   margin-top: 32px;
 }
