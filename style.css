@@ -247,19 +247,6 @@ h1{
   border-radius: 18px;    /* or remove if you want flush edges */
 }
 
-/* HERO layout: prevent the image card from stretching taller than the photo */
-.hero-grid{
-  align-items: start; /* key: don't stretch items to same height */
-}
-
-/* Make sure the right card hugs its content (the photo) */
-.hero-card{
-  align-self: start;
-  padding: 0;
-  overflow: hidden;
-  border-radius: 18px; /* match your style */
-}
-
 /* Remove the mysterious extra space under images */
 .photo-wrap{
   line-height: 0;
@@ -271,8 +258,6 @@ h1{
   height: auto;      /* image defines card height */
   object-fit: cover; /* optional: keeps it looking clean if you set a height later */
 }
-
-
 
 .photo {
   display: block;
@@ -294,6 +279,28 @@ h1{
   padding: 16px;
   font-size: 0.95rem;
   color: var(--muted);
+}
+
+.hero-grid{
+  align-items: stretch;
+}
+
+/* Left column: evenly distribute top content + bottom paragraph card */
+.hero-text{
+  height: 100%;
+  justify-content: space-between;
+}
+
+/* Remove margins that fight space-between */
+.hero-text .subhead,
+.hero-text .cta,
+.hero-paragraph{
+  margin: 0;
+}
+
+/* Keep CTA buttons separated without using margins */
+.hero-text .cta{
+  gap: 14px;
 }
 
 /* ---------- SECTIONS ---------- */
