@@ -600,69 +600,77 @@ section:last-of-type {
   border-top: 1px solid #e5e7eb; /* optional clean divider */
 }
 
+/* =========================
+   TRAITS SECTION
+   ========================= */
+
+/* Grid layout */
 .traits-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
   margin-top: 32px;
 }
 
-@media (max-width: 1024px) {
-  .traits-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+/* Individual card */
+.trait-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 
-@media (max-width: 640px) {
-  .traits-grid {
-    grid-template-columns: 1fr;
-  }
+  padding: 28px 24px;
+  border-radius: 12px;
 
-  .trait-card:last-child {
-    grid-column: auto;
-  }
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
 }
 
 /* Icon container */
 .trait-icon {
   width: 56px;
   height: 56px;
-  margin: 0 auto 14px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  margin-bottom: 12px;
 }
 
 /* Icon image */
 .trait-icon img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  display: block;
 }
 
 /* Title */
 .trait-title {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  margin-bottom: 6px;
+  margin: 8px 0;
 }
 
-/* Description */
+/* Description text */
 .trait-text {
   font-size: 0.95rem;
   color: #4b5563;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
-/* Tablet */
+/* =========================
+   RESPONSIVE BREAKPOINTS
+   ========================= */
+
+/* Tablet: 2 across */
 @media (max-width: 1024px) {
   .traits-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-/* Mobile */
+/* Mobile: 1 per row */
 @media (max-width: 640px) {
   .traits-grid {
     grid-template-columns: 1fr;
