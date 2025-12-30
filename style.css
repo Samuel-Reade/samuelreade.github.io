@@ -121,12 +121,53 @@ h1{
 /* ===== HERO LAYOUT FIXES ===== */
 
 /* 1) Make the hero grid align items nicely */
+/* HERO GRID */
 .hero-grid{
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr; /* left / right */
+  grid-template-columns: 1.2fr 0.8fr;
   gap: 32px;
   align-items: stretch;
 }
+
+/* LEFT COLUMN: stack + fill height */
+.hero-text{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* tighten spacing so left column sits higher */
+.hero-text .subhead{ margin-bottom: 16px; }
+.hero-text .cta{ margin-bottom: 16px; }
+
+/* The paragraph card should sit under the buttons */
+.hero-paragraph{
+  margin-top: 0;
+}
+
+/* RIGHT COLUMN CARD: remove padding that creates “bottom space” */
+.hero-card{
+  padding: 0 !important;   /* important if old css adds padding */
+  overflow: hidden;        /* keeps rounded corners clean */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make wrapper fill the card and remove default img spacing */
+.photo-wrap{
+  flex: 1;                 /* fills card height */
+  margin: 0;
+}
+
+/* Image fills wrapper (no extra gap under it) */
+.photo{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* use contain if you don’t want cropping */
+}
+
+
 
 /* Left side is a stack: text -> buttons -> paragraph card pushed down */
 .hero-text{
