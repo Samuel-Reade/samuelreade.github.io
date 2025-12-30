@@ -69,12 +69,6 @@ a{
   padding: 80px 0 5px;
 }
 
-.hero-grid{
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 40px;
-}
-
 .kicker{
   font-size: 0.75rem;
   letter-spacing: 0.08em;
@@ -122,6 +116,99 @@ h1{
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 8px;
+}
+
+/* ===== HERO LAYOUT FIXES ===== */
+
+/* 1) Make the hero grid align items nicely */
+.hero-grid{
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr; /* left / right */
+  gap: 32px;
+  align-items: stretch;
+}
+
+/* Left side is a stack: text -> buttons -> paragraph card pushed down */
+.hero-text{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Buttons live between subhead and paragraph card */
+.hero-text .cta{
+  display: flex;
+  gap: 14px;
+  margin-top: 18px;
+  margin-bottom: 18px; /* space before paragraph card */
+}
+
+/* If your .btn looks like a card, force it to be a button */
+.hero-text .btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  color: #111827;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero-text .btn:hover{
+  background: #f9fafb;
+}
+
+/* Push paragraph card to the bottom so it lines up with the photo card bottom */
+.hero-paragraph{
+  margin-top: auto;
+}
+
+/* Make paragraph text match other card text */
+.hero-paragraph p{
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.65;
+}
+
+/* ===== HEADSHOT CARD "LINE" FIX ===== */
+
+/* Remove bottom padding/border effects that look like an extra line */
+.hero-card{
+  padding: 0;             /* important: prevents "extra strip" */
+  overflow: hidden;       /* hides any internal edges */
+}
+
+/* If you have a photo wrapper, make it fill without leaving space */
+.photo-wrap{
+  margin: 0;
+  padding: 0;
+  line-height: 0;         /* removes inline-image baseline gap */
+}
+
+/* Ensure the image is block-level and fills the wrap cleanly */
+.photo{
+  display: block;         /* removes the tiny baseline gap */
+  width: 100%;
+  height: auto;
+  border-radius: 0;       /* optional; use if card already has rounding */
+}
+
+/* If you want rounded image corners, do it on the card instead */
+.hero-card{
+  border-radius: 18px;    /* match your card rounding */
+}
+
+/* Optional: if you still want some padding around the image, do it here */
+.hero-card .photo{
+  border-radius: 18px;    /* or remove if you want flush edges */
+}
+
+
+.photo {
+  display: block;
 }
 
 .photo-wrap{
