@@ -78,11 +78,6 @@ a{
 }
 
 /* LEFT COLUMN */
-.hero-text{
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
 
 /* Buttons row */
 .hero-text .cta{
@@ -156,16 +151,7 @@ a{
   background: #f9fafb;
 }
 
-/* Align paragraph bottom with image bottom */
-.hero-grid{
-  align-items: stretch;
-}
-.hero-text{
-  height: 100%;
-}
-.hero-paragraph{
-  margin-top: auto;
-}
+
 
 
 
@@ -721,47 +707,63 @@ section:last-of-type {
 }
 
 
-/* ===== HERO HARD FIX (paste at VERY bottom) ===== */
 
-/* Make the hero row behave */
+
+/* ===== HERO "STRUCTURAL" FIX (only requires .hero-grid) ===== */
+
+/* Space under header + make both columns share one height */
 .hero-grid{
-  align-items: stretch !important;
+  padding-top: 28px;
+  align-items: stretch;
 }
 
-/* Keep the photo card a reasonable width + aligned right */
-.hero-card{
-  justify-self: end;
-  width: min(440px, 100%);
-  height: auto !important;
-  overflow: hidden;
-}
-
-/* IMPORTANT: the wrapper must NOT add padding/border that changes sizing */
-.photo-wrap{
-  padding: 0 !important;
-  border: 0 !important;
-  line-height: 0;
-}
-
-/* IMPORTANT: kill any old "height:100%" or square aspect ratio rules */
-.photo{
-  display: block;
-  width: 100%;
-  height: auto !important;
-  aspect-ratio: 4 / 5 !important;
-  object-fit: cover;
-}
-
-/* Left side should fill the same height and pin paragraph to bottom */
-.hero-text{
-  height: 100%;
+/* LEFT column = first child: stack + pin paragraph to bottom */
+.hero-grid > :first-child{
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  height: 100%;
   gap: 14px;
 }
-.hero-paragraph{
-  margin-top: auto;
+.hero-grid > :first-child .hero-paragraph{
+  margin-top: auto;               /* bottom-align paragraph card */
 }
 
+/* Buttons look (works even if they’re just <a> tags) */
+.hero-grid > :first-child .cta{
+  display: flex;
+  gap: 14px;
+}
+.hero-grid > :first-child .cta a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: #111827;
+  text-decoration: none;
+  font-weight: 600;
+}
+.hero-grid > :first-child .cta a:hover{
+  background: #f9fafb;
+}
 
+/* RIGHT column = last child: make photo card smaller + consistent height */
+.hero-grid > :last-child{
+  justify-self: end;
+  width: min(440px, 100%);        /* smaller photo */
+  aspect-ratio: 4 / 5;            /* controls hero height */
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: var(--card);
+}
+
+/* Image fills the card */
+.hero-grid > :last-child img{
+  display: block;
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
+}
