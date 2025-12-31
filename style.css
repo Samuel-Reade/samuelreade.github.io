@@ -800,3 +800,22 @@ section:last-of-type {
   height: 100% !important;
   object-fit: cover;
 }
+
+/* TEMP: remove any divider lines around contact/footer area */
+#contact, #contact *, 
+.site-footer, .site-footer *{
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+#contact::before, #contact::after,
+.site-footer::before, .site-footer::after{
+  content: none !important;
+}
+
+#contact hr, .site-footer hr{
+  display: none !important;
+  height: 0 !important;
+}
+
