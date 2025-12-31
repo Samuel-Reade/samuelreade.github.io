@@ -753,7 +753,7 @@ section:last-of-type {
 .hero-grid > :last-child{
   justify-self: end;
   width: min(440px, 100%);        /* smaller photo */
-  aspect-ratio: 4 / 5;            /* controls hero height */
+  aspect-ratio: 3 / 4;            /* controls hero height */
   overflow: hidden;
   border-radius: 18px;
   border: 1px solid var(--line);
