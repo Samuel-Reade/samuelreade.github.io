@@ -110,239 +110,91 @@ h1{
   border-color: var(--text);
 }
 
-/* ---------- HERO CARD ---------- */
+/* ===== HERO (TOP SECTION) ===== */
 
-.hero-card{
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-}
-
-/* ===== HERO LAYOUT FIXES ===== */
-
-/* 1) Make the hero grid align items nicely */
-/* HERO GRID */
 .hero-grid{
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: 32px;
-  align-items: stretch;
+  align-items: stretch;            /* key: both columns same height */
 }
 
-/* LEFT COLUMN: stack + fill height */
+/* Left column: evenly spaced blocks from top to bottom */
 .hero-text{
   display: flex;
   flex-direction: column;
   height: 100%;
+  justify-content: space-between;  /* equal vertical spacing */
 }
 
-/* tighten spacing so left column sits higher */
-.hero-text .subhead{ margin-bottom: 16px; }
-.hero-text .cta{ margin-bottom: 16px; }
-
-/* The paragraph card should sit under the buttons */
-.hero-paragraph {
-  margin-top: 18px;
-}
-
-/* RIGHT COLUMN CARD: remove padding that creates “bottom space” */
-.hero-card{
-  padding: 0 !important;   /* important if old css adds padding */
-  overflow: hidden;        /* keeps rounded corners clean */
-  display: flex;
-  flex-direction: column;
-}
-
-/* Make wrapper fill the card and remove default img spacing */
-.photo-wrap{
-  flex: 1;                 /* fills card height */
+/* Remove margins that break equal spacing */
+.hero-text .subhead,
+.hero-text .cta,
+.hero-paragraph{
   margin: 0;
 }
 
-/* Image fills wrapper (no extra gap under it) */
-.photo{
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;       /* use contain if you don’t want cropping */
-}
-
-
-
-/* Left side is a stack: text -> buttons -> paragraph card pushed down */
-.hero-text{
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-/* Buttons live between subhead and paragraph card */
+/* Buttons row */
 .hero-text .cta{
   display: flex;
   gap: 14px;
-  margin-top: 18px;
-  margin-bottom: 18px; /* space before paragraph card */
 }
 
-/* If your .btn looks like a card, force it to be a button */
+/* Button look (tweak to match your theme) */
 .hero-text .btn{
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 12px 18px;
   border-radius: 12px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--line);
   background: #fff;
   color: #111827;
   text-decoration: none;
   font-weight: 600;
 }
-
 .hero-text .btn:hover{
   background: #f9fafb;
 }
 
-/* Push paragraph card to the bottom so it lines up with the photo card bottom */
+/* Paragraph card */
 .hero-paragraph{
-  margin-top: auto;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px;
 }
-
-/* Make paragraph text match other card text */
 .hero-paragraph p{
   margin: 0;
-  color: #4b5563;
+  color: var(--muted);
   line-height: 1.65;
 }
 
-/* ===== HEADSHOT CARD "LINE" FIX ===== */
-
-/* Remove bottom padding/border effects that look like an extra line */
+/* Right: photo card fills the grid row height */
 .hero-card{
-  padding: 0;             /* important: prevents "extra strip" */
-  overflow: hidden;       /* hides any internal edges */
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  height: 100%;
 }
 
-/* If you have a photo wrapper, make it fill without leaving space */
+/* Make the image fill the card */
 .photo-wrap{
+  height: 100%;
   margin: 0;
   padding: 0;
-  line-height: 0;         /* removes inline-image baseline gap */
+  line-height: 0;                 /* removes tiny baseline gap */
+  border: 0;
 }
-
-/* Ensure the image is block-level and fills the wrap cleanly */
-.photo{
-  display: block;         /* removes the tiny baseline gap */
-  width: 100%;
-  height: auto;
-  border-radius: 0;       /* optional; use if card already has rounding */
-}
-
-/* If you want rounded image corners, do it on the card instead */
-.hero-card{
-  border-radius: 18px;    /* match your card rounding */
-}
-
-/* Optional: if you still want some padding around the image, do it here */
-.hero-card .photo{
-  border-radius: 18px;    /* or remove if you want flush edges */
-}
-
-/* Remove the mysterious extra space under images */
-.photo-wrap{
-  line-height: 0;
-}
-
 .photo{
   display: block;
   width: 100%;
-  height: auto;      /* image defines card height */
-  object-fit: cover; /* optional: keeps it looking clean if you set a height later */
-}
-
-.photo {
-  display: block;
-}
-
-.photo-wrap{
-  padding: 16px;
-  border-bottom: 1px solid var(--line);
-}
-
-.photo{
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-.hero-card-body{
-  padding: 16px;
-  font-size: 0.95rem;
-  color: var(--muted);
-}
-
-.hero-grid{
-  align-items: stretch;
-}
-
-/* Left column: evenly distribute top content + bottom paragraph card */
-.hero-text{
-  height: 100%;
-  justify-content: space-between;
-}
-
-/* Remove margins that fight space-between */
-.hero-text .subhead,
-.hero-text .cta,
-.hero-paragraph{
-  margin: 0;
-}
-
-/* Keep CTA buttons separated without using margins */
-.hero-text .cta{
-  gap: 14px;
-}
-
-/* 1) Grid: make both columns share the same row height */
-.hero-grid{
-  align-items: stretch !important;   /* overrides any align-items:start */
-}
-
-/* 2) Right photo card should stretch to the row height */
-.hero-grid > .hero-card{
-  height: 100%;
-}
-
-/* 3) Make the photo fill the card height cleanly */
-.hero-card .photo-wrap{
-  height: 100%;
-  padding: 0;             /* remove the 16px that changes height math */
-  border-bottom: 0;       /* optional: remove divider */
-  line-height: 0;
-}
-
-.hero-card .photo{
-  width: 100%;
   height: 100%;
   object-fit: cover;
-  aspect-ratio: auto;     /* IMPORTANT: overrides your 1/1 square rule */
-  border-radius: 0;       /* keep rounding on the card, not the img */
+  aspect-ratio: auto;             /* overrides any old 1/1 rule */
 }
 
-/* 4) Left side: equal vertical spacing across the full height */
-.hero-text{
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* 5) Don’t let random margins ruin “equal spacing” */
-.hero-text .subhead,
-.hero-text .cta,
-.hero-paragraph{
-  margin: 0 !important;
-}
 
 /* ---------- SECTIONS ---------- */
 
@@ -893,28 +745,3 @@ section:last-of-type {
   margin: 0 !important;
 }
 
-/* ===== HERO: align paragraph card bottom with headshot card + match text color ===== */
-
-/* Make the hero grid items stretch to the same row height */
-.hero-grid {
-  align-items: stretch;
-}
-
-/* Make the left column a vertical stack that can "push" the paragraph card down */
-.hero-text {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.hero-paragraph{
-  margin: 0;
-  padding: 24px; /* keep if you want */
-}
-
-/* Match paragraph text styling to your other card/body text */
-.hero-paragraph p {
-  margin: 0;
-  color: #4b5563; /* muted gray */
-  line-height: 1.6;
-}
