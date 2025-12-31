@@ -65,20 +65,23 @@ a{
 
 
 
+
+
 /* ===== HERO (TOP SECTION) ===== */
 
 .hero-grid{
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: 32px;
-  align-items: stretch;            /* key: both columns same height */
+  align-items: stretch;      /* both columns same height */
+  margin-top: 28px;          /* keeps photo from touching header */
 }
 
-/* Left column: evenly spaced blocks from top to bottom */
+/* LEFT COLUMN: evenly space items within the image height */
 .hero-text{
+  height: 100%;
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: space-between;  /* equal vertical spacing */
 }
 
@@ -86,7 +89,7 @@ a{
 .hero-text .subhead,
 .hero-text .cta,
 .hero-paragraph{
-  margin: 0;
+  margin: 0 !important;
 }
 
 /* Buttons row */
@@ -95,7 +98,7 @@ a{
   gap: 14px;
 }
 
-/* Button look (tweak to match your theme) */
+/* Buttons */
 .hero-text .btn{
   display: inline-flex;
   align-items: center;
@@ -112,7 +115,7 @@ a{
   background: #f9fafb;
 }
 
-/* Paragraph card */
+/* Paragraph card (left bottom card) */
 .hero-paragraph{
   background: var(--card);
   border: 1px solid var(--line);
@@ -125,50 +128,31 @@ a{
   line-height: 1.65;
 }
 
-/* Right: photo card fills the grid row height */
+/* RIGHT COLUMN: fixed responsive height so the left has a height to match */
 .hero-card{
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 18px;
   overflow: hidden;
-  height: 100%;
+  height: clamp(420px, 44vw, 600px); /* controls the shared hero height */
 }
 
-.hero-card{
-  height: clamp(380px, 42vw, 560px);  /* pick whatever feels right */
-}
-
-/* Make the image fill the card */
+/* Image fills the card */
 .photo-wrap{
   height: 100%;
   margin: 0;
   padding: 0;
-  line-height: 0;                 /* removes tiny baseline gap */
   border: 0;
+  line-height: 0;
 }
 .photo{
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  aspect-ratio: auto;             /* overrides any old 1/1 rule */
+  aspect-ratio: auto;  /* overrides any old square rule */
 }
 
-.photo-wrap{ height: 100%; padding: 0; border: 0; line-height: 0; }
-.photo{ width: 100%; height: 100%; object-fit: cover; aspect-ratio: auto; }
-
-.hero-grid{ align-items: stretch; }
-
-.hero-text{
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* equal spacing */
-}
-
-.hero-text .subhead,
-.hero-text .cta,
-.hero-paragraph{ margin: 0 !important; }
 
 
 
