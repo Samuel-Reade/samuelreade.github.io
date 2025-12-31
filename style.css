@@ -147,6 +147,11 @@ a{
   text-decoration: none;
   font-weight: 600;
 }
+
+.hero-text .cta{
+  margin-top: 6px;   /* try 6–12px */
+}
+
 .hero-text .cta a:hover{
   background: #f9fafb;
 }
