@@ -118,6 +118,7 @@ a{
   height: auto;
   aspect-ratio: 1 / 1;
   object-fit: cover;
+  object-position: center 30%;
 }
 
 /* ===== HERO REFINEMENTS ===== */
