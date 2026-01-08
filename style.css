@@ -839,11 +839,13 @@ section:last-of-type {
 }
 
 .connect-text{
-  margin: 0;                /* 🔑 removes baseline offset */
-  color: #fff;
-  line-height: 1.3;         /* visually centers text */
+  margin: 0;
+  line-height: 1.15;   /* tighter line box */
 }
 
+.connect-strip-inner{
+  transform: translateY(-1px); /* optical correction */
+}
 
 /* ===== CONNECT BUTTON — MATCH GLOBAL BUTTON STYLE ===== */
 
