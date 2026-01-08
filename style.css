@@ -913,12 +913,34 @@ section:last-of-type {
   line-height: 1.6;
 }
 
+/* ===== CONNECT PAGE BUTTONS (LOCAL ONLY) ===== */
+
 .connect-actions{
   display: flex;
   gap: 12px;
   margin-top: 16px;
   flex-wrap: wrap;
 }
+
+.connect-actions a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  color: #111827;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.15s ease;
+}
+
+.connect-actions a:hover{
+  background: #f9fafb;
+  transform: translateY(-1px);
+}
+
 
 /* right side meta */
 .connect-meta{
