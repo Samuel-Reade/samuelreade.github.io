@@ -820,3 +820,45 @@ section:last-of-type {
   height: 0 !important;
 }
 
+
+
+
+/* ===== CONNECT STRIP ===== */
+
+.connect-strip{
+  border-top: 1px solid var(--line);
+  padding: 28px 0;
+  margin-top: 48px;
+}
+
+.connect-strip-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* Text */
+.connect-text{
+  margin: 0;
+  font-size: 1.05rem;
+  color: #374151;
+}
+
+/* Button uses your existing .btn styles */
+.connect-strip .btn{
+  white-space: nowrap;
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  .connect-strip-inner{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .connect-strip .btn{
+    margin-top: 8px;
+  }
+}
+
