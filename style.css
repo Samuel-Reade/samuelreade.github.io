@@ -916,6 +916,7 @@ section:last-of-type {
 .connect-actions{
   display: flex;
   gap: 12px;
+  margin-top: 16px;
   flex-wrap: wrap;
 }
 
