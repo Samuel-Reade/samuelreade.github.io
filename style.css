@@ -827,16 +827,15 @@ section:last-of-type {
 
 .connect-strip{
   background: #0b1220;
-  padding: 50px 0;
-  display: flex;
-  align-items: center;      /* 🔑 real vertical centering */
+  margin: 0;
+  padding: 50px 0;              /* 🔑 THIS is the missing piece */
 }
 
 .connect-strip-inner{
   display: flex;
-  align-items: center;
+  align-items: center;          /* vertical centering */
   justify-content: space-between;
-  width: 100%;
+  gap: 24px;
 }
 
 .connect-text{
