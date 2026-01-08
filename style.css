@@ -836,7 +836,7 @@ section:last-of-type {
   justify-content: space-between;
   height: 110px;          /* controls strip height */
   gap: 24px;
-  transform: translateY(-2px);
+  padding-top: 4px; 
 }
 
 /* TEXT — force white so it shows up */
