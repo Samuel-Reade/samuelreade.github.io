@@ -847,14 +847,21 @@ section:last-of-type {
   font-size: 1rem;
 }
 
-/* Button */
+/* ===== CONNECT BUTTON — MATCH GLOBAL BUTTON STYLE ===== */
+
 .connect-strip .connect-btn{
   background: #ffffff;
   color: #0b1220;
-  border: 1px solid #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;       /* pill shape */
+  padding: 12px 22px;         /* match other buttons */
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Hover */
 .connect-strip .connect-btn:hover{
   background: #f3f4f6;
 }
